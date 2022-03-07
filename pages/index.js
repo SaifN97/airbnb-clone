@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LargeCard from '../components/LargeCard'
 import MediumCard from '../components/MediumCard'
@@ -34,7 +35,7 @@ export default function Home({ exploreData, cardsData }) {
         <section>
           <h2 className="py-8 text-4xl font-semibold">Live Anywhere</h2>
 
-          <div className="-ml-3 flex space-x-3 overflow-y-scroll p-3 scrollbar-hide">
+          <div className="-ml-3 flex space-x-3 overflow-scroll p-3 scrollbar-hide">
             {cardsData?.map(({ img, title }) => (
               <MediumCard key={title} img={img} title={title} />
             ))}
@@ -48,6 +49,8 @@ export default function Home({ exploreData, cardsData }) {
           buttonText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   )
 }
