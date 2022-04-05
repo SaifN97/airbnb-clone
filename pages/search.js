@@ -18,8 +18,8 @@ const Search = ({ searchResults }) => {
       <Header
         placeholder={`${location} | ${range} | ${numberOfGuests} Guests`}
       />
-      <main className="flex">
-        <section className="flex-grow px-6 pt-14">
+      <main className="flex overflow-hidden">
+        <section className="relative h-screen overflow-y-scroll px-6 pt-14">
           <p className="text-xs">
             300+ Stays - {range} - for {numberOfGuests} Guests
           </p>
@@ -53,7 +53,7 @@ const Search = ({ searchResults }) => {
           </div>
         </section>
         {/* //Map */}
-        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+        <section className="hidden h-screen overflow-hidden xl:inline-flex xl:min-w-[600px]">
           <Map searchResults={searchResults} />
         </section>
       </main>

@@ -1,4 +1,4 @@
-import { getCenter } from 'geolib'
+import getCenter from 'geolib/es/getCenter'
 import { useState } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 
@@ -51,7 +51,7 @@ const Map = ({ searchResults }) => {
               latitude={result.lat}
               longitude={result.long}
             >
-              {result.title}
+              <div className="z-50">{result.title}</div>
             </Popup>
           )}
         </div>
